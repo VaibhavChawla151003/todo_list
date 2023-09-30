@@ -2,7 +2,7 @@
     "rewrites": [
       {
         "source": "/api/:path*",
-        "destination": "https://todo-backend-pxuk.onrender.com/api/v1/:path*"
+        "destination": "https://todo-backend-pxuk.onrender.com/api/:path*"
       }
     ]
   }
