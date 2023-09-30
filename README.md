@@ -54,7 +54,7 @@ Implement protected routes to ensure that only authenticated users can access th
 Run the following command to clone the repository
 
 ```bash
-  git clone https://github.com/VaibhavChawla151003/todoApp.git
+  git clone https://github.com/VaibhavChawla151003/todo_list.git
 ```
 Go to client and server directory to install packages
 
