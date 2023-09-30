@@ -23,6 +23,7 @@ app.use(cors())
 app.get('/', (req, res) => {
   res.json('server is Ok');
 });
+
 app.use('/api/v1/users',require('./routes/userRoute'));
 
 //tasks routes
