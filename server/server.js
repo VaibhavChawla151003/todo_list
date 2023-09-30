@@ -4,6 +4,7 @@ const morgan = require('morgan')
 const dotenv = require('dotenv')
 const colors = require('colors')
 const connectDb = require('./config/connectDb');
+const PORT = process.env.PORT;
 //config .env file
 
 dotenv.config();
@@ -25,7 +26,7 @@ app.use('/api/v1/users',require('./routes/userRoute'));
 app.use('/api/v1/tasks',require('./routes/taskRoutes'));
 
 //port
-const PORT = 8080 || process.env.PORT
+
 
 //listen server
 
