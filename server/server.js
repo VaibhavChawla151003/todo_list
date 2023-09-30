@@ -17,7 +17,14 @@ const app = express()
 //middlewares
 app.use(morgan('dev'))
 app.use(express.json())
-app.use(cors())
+
+app.use(cors(
+  {
+    origin :["https://todo-list-phi-olive-61.vercel.app/"],
+    methods :["POST" , "GET"],
+    credentials: true
+  }
+))
 
 //user routes
 app.get('/', (req, res) => {
