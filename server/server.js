@@ -31,10 +31,10 @@ app.get('/', (req, res) => {
   res.json('server is Ok');
 });
 
-app.use('/api/users',require('./routes/userRoute'));
+app.use('/api/v1/users',require('./routes/userRoute'));
 
 //tasks routes
-app.use('/api/tasks',require('./routes/taskRoutes'));
+app.use('/api/v1/tasks',require('./routes/taskRoutes'));
 
 
 
