@@ -20,7 +20,7 @@ app.use(express.json())
 
 app.use(cors(
   {
-    origin :["https://todo-list-phi-olive-61.vercel.app/"],
+    origin :["https://todo-backend-pxuk.onrender.com/"],
     methods :["POST" , "GET"],
     credentials: true
   }
