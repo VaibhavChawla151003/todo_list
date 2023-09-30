@@ -19,11 +19,11 @@ app.use(morgan('dev'))
 app.use(express.json())
 
 app.use(cors(
-  {
-    origin :["https://todo-backend-pxuk.onrender.com/"],
-    methods :["POST" , "GET"],
-    credentials: true
-  }
+  // {
+  //   origin :["https://todo-backend-pxuk.onrender.com/"],
+  //   methods :["POST" , "GET"],
+  //   credentials: true
+  // }
 ))
 
 //user routes
