@@ -18,6 +18,11 @@ app.use(morgan('dev'))
 app.use(express.json())
 app.use(cors())
 
+app.get("/",(req,res) =>{
+    res.setHeader("Access-Control-Allow-Credentials","true");
+    res.send("API is running..");
+})
+
 //user routes
 app.use('/api/v1/users',require('./routes/userRoute'));
 
@@ -25,7 +30,7 @@ app.use('/api/v1/users',require('./routes/userRoute'));
 app.use('/api/v1/tasks',require('./routes/taskRoutes'));
 
 //port
-const PORT = 8080 || process.env.PORT
+const PORT = process.env.PORT ||8080;
 
 //listen server
 
