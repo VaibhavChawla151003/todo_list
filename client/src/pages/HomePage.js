@@ -10,6 +10,7 @@ const HomePage = () => {
   const [loading,setLoading] = useState(false);
   const [allTask,setAllTask]=useState([]);
   const [editable,setEditable] = useState(null) 
+  const PAGE_SIZE = 5;
 
    //table data 
    const columns = [
@@ -95,7 +96,7 @@ const HomePage = () => {
        {loading && <Spinner/>}
        
        <div className='content'>
-          <Table className="tabledata" columns={columns} dataSource={allTask} />
+          <Table className="tabledata" columns={columns} dataSource={allTask.slice(PAGE_SIZE)} />
           <div className='filters'>
          <div>
            <button className='add btn btn-primary' onClick={()=>setShowModal(true)}>Add New</button>

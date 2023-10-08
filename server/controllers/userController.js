@@ -3,7 +3,7 @@ const userModel = require('../models/userModel')
 //login callback
 const loginController = async (req, res) => {
     try {
-        const { email, password } = req.body;
+        const { email, password } = req.body;   //destructuring req.body into email and password
         const user = await userModel.findOne({ email, password });
         if (!user) {
             res.status(400).send('User not found');
@@ -23,7 +23,6 @@ const loginController = async (req, res) => {
 //register callback
 const registerController = async (req,res) => {
     try {
-        
         const newUser = new userModel(req.body)
         await newUser.save();
         res.json({
@@ -38,4 +37,5 @@ const registerController = async (req,res) => {
         });
     }
 };
+
 module.exports = { loginController, registerController };
