@@ -4,10 +4,8 @@ import Layout from '../components/Layout/Layout'
 import axios from 'axios'
 import {EditOutlined, CheckCircleOutlined} from '@ant-design/icons'
 import "../styles/HomePagestyles.css"
-import { useNavigate } from 'react-router-dom'
 import Spinner from '../components/Spinner'
 const HomePage = () => {
-  const navigate = useNavigate();
   const [showModal,setShowModal]=useState(false);
   const [loading,setLoading] = useState(false);
   const [allTask,setAllTask]=useState([]);
@@ -60,8 +58,7 @@ const HomePage = () => {
       await axios.post("https://todo-backend-pxuk.onrender.com/api/v1/tasks/delete-task",{taskId:record._id})
       setLoading(false)
       message.success("Task Deleted")
-      // window.location.reload()
-      navigate('/');
+      window.location.reload()
     }catch(error){
       setLoading(false)
       console.log(error)
@@ -80,13 +77,11 @@ const HomePage = () => {
           },taskId:editable._id
         }) ;
           message.success('Task Edited Successfully')
-          // window.location.reload()
-          navigate('/');
+          window.location.reload()
          }else{
           await axios.post('https://todo-backend-pxuk.onrender.com/api/v1/tasks/add-task',{...values,userid:user._id})  
          message.success('Task Added Successfully')
-        //  window.location.reload()
-         navigate('/');
+         window.location.reload()
          }
          setShowModal(false)
          setEditable(null)
