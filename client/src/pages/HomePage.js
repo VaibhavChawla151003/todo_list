@@ -96,7 +96,7 @@ const HomePage = () => {
        {loading && <Spinner/>}
        
        <div className='content'>
-          <Table className="tabledata" columns={columns} dataSource={allTask} pagination={{ defaultPageSize: 3, showSizeChanger: true, pageSizeOptions: ['10', '20', '30']}} />
+          <Table className="tabledata" columns={columns} dataSource={allTask} pagination={{ defaultPageSize: 5, showSizeChanger: true, pageSizeOptions: ['10', '20', '30']}} />
           <div className='filters'>
          <div>
            <button className='add btn btn-primary' onClick={()=>setShowModal(true)}>Add New</button>
