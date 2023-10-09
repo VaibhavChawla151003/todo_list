@@ -6,7 +6,7 @@ import man from "../../Images/man.png"
 import todo from "../../Images/to-do-list.png"
 const Header = () => {
   const [loginUser,setLoginUser] = useState('')
-  const navigate = useNavigate()
+  const navigate = useNavigate()  //making navigate object
   useEffect(()=>{
     const user = JSON.parse(localStorage.getItem('user'))
     if(user){
