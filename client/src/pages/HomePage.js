@@ -11,11 +11,10 @@ const HomePage = () => {
   const [allTask,setAllTask]=useState([]);
   const [editable,setEditable] = useState(null) 
 
-
    //table data 
    const columns = [
     {
-      title:'Title',
+      title:'Task',
       dataIndex:'title'
     },
     {
